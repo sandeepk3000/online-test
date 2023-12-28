@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #dd {
+
+            margin: 0 auto;
+
+        }
+
+        .quizQn {
+            padding: 20px;
+            background: #4c93ba;
+            color: #fff;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+
+        .quizAns {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+        }
+
+        .quizAns input[type=radio] {
+            display: none;
+        }
+
+        .quizAns label {
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .quizAns label.correct {
+            background: #d8ffc4;
+            border: 1px solid #60a03f;
+        }
+
+        .quizAns label.wrong {
+            background: #ffe8e8;
+            border: 1px solid #c78181;
+        }
+
+        * {
+            font-family: arial, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            background: rgb(238, 174, 202);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
+
+        .widget-wrap {
+            max-width: 800px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="widget-wrap json">
+        <div class="row mb-2 testHeader">
+
+        </div>
+        <div class="row m-auto">
+            <div class="col-12 mb-5">
+                <div id="carouselQuestionsWrap" class="carousel slide" data-bs-wrap="false" data-bs-ride="carousel"
+                    data-bs-interval="false">
+                    <div class="carousel-indicators" id="indicators" style="top: 100%;">
+                    </div>
+                    <div class="carousel-inner" id="questionsWrap">
+                    </div>
+                    <button class="carousel-control-prev" type="button" style="left: -15%;"
+                        data-bs-target="#carouselQuestionsWrap" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" style="left: 100%;" type="button"
+                        data-bs-target="#carouselQuestionsWrap" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-12 testEstimation">
+
+            </div>
+        </div>
+        <div class="row btnsWrapper">
+
+            <!-- <button class="submit btn-primary btn">Submit</button> -->
+
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/test.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
